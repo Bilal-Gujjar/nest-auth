@@ -10,7 +10,6 @@ import {
 } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { AuthService } from './auth/auth.service';
-import { RoleGuard } from './user/role.gard';
 import { UserService } from './user/user.service';
 import { User } from './user/user.entity';
 
@@ -60,8 +59,8 @@ export class AppController {
   async deletePassword(@Body('id') id: number): Promise<User> {
     return await this.userService.deletePasswordById(id);
   }
-  //add new user password in database 
-  @Post('/login-new') 
+  //add new user password in database
+  @Post('/login-new')
   async addNewPassword(
     @Body('id') id: number,
     @Body('password') password: string,

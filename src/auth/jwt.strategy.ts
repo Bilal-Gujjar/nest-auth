@@ -11,7 +11,6 @@ export class JWTStrategy extends PassportStrategy(Strategy) {
       secretOrKey: 'secret',
     });
   }
-
   validate(payload: any): any {
     return payload;
   }
