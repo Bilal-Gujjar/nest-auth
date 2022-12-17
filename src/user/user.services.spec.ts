@@ -4,8 +4,6 @@ import { UserService } from './user.service';
 import { User } from './user.entity';
 import { getRepositoryToken } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { InjectRepository } from '@nestjs/typeorm';
-
 
 describe('UserService', () => {
   let userService: UserService;
