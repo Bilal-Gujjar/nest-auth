@@ -1,8 +1,8 @@
 # compiled output
 /dist
 /node_modules
-/.local.env
-/.build.env
+.local.env
+.build.env
 
 # Logs
 logs
