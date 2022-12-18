@@ -1,14 +1,6 @@
-FROM node:14
-
+FROM node:18-alpine As development
 WORKDIR /usr/src/app
-
-COPY package*.json ./
-
-RUN npm install
-
-COPY . .
-
-
-EXPOSE 8080
-CMD [ "npm", "run", "start:dev" ]
-
+COPY --chown=node:node package*.json ./
+RUN npm ci
+COPY --chown=node:node . .
+USER node
