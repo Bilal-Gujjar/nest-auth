@@ -1,4 +1,3 @@
-//test the user service
 import { Test, TestingModule } from '@nestjs/testing';
 import { UserService } from './user.service';
 import { User } from './user.entity';
@@ -27,7 +26,7 @@ describe('UserService', () => {
   it('should be defined', () => {
     expect(userService).toBeDefined();
   });
-  //add user in database
+ 
   it('should create a user', async () => {
     const user = new User();
     user.username = 'test';
@@ -38,7 +37,7 @@ describe('UserService', () => {
     expect(await userService.create(user)).toBe(user);
     console.log(user);
   });
-  //find all users test and console.log the result
+  
   it('should find all users', async () => {
     const user = [];
     jest.spyOn(userRepository, 'find').mockResolvedValue(user);
@@ -46,9 +45,5 @@ describe('UserService', () => {
     expect(await userService.findAll()).toBe(user);
     console.log(user);
   });
-
-
+ 
 });
-
-
-
