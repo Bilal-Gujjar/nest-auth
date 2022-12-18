@@ -1,4 +1,3 @@
-//Write test for the app controller
 import { Test, TestingModule } from '@nestjs/testing';
 import { AppController } from './app.controller';
 import { AuthService } from './auth/auth.service';
